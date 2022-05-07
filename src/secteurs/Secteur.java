@@ -1,4 +1,5 @@
 package secteurs;
+
 import enumeration.Type;
 
 public class Secteur {
@@ -6,8 +7,7 @@ public class Secteur {
 	public int longitude;
 	public int latitude;
 	public Type type;
-	
-	
+
 	public Secteur(int id, int longitude, int latitude, Type type) {
 		this.id = id;
 		this.longitude = longitude;
@@ -46,9 +46,5 @@ public class Secteur {
 	public void setType(Type type) {
 		this.type = type;
 	}
-	
-	
-	
+
 }
-
-

@@ -1,0 +1,15 @@
+objectifs:
+
+- Afficher monde vide
+
+- Initialise le monde avec des secteurs vides
+
+- Ajouter les secteurs d'eau
+
+- Ajouter les minerais
+
+- Ajouter les entrepots
+
+- Ajouter les robots
+
+- Afficher la matrice finale
