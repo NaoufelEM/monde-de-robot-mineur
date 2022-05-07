@@ -10,7 +10,7 @@ public class Mine extends Secteur {
 	private int capaciteDepart;
 	private List<Minerai> minerais;
 
-	public Mine(int id, int longitude, int latitude, Type type, int capaciteDepart) {
+	public Mine(String id, int longitude, int latitude, Type type, int capaciteDepart) {
 		super(id, longitude, latitude, type);
 		this.capaciteDepart = capaciteDepart;
 		this.minerais = new ArrayList<>(100);

@@ -3,23 +3,23 @@ package secteurs;
 import enumeration.Type;
 
 public class Secteur {
-	public int id;
-	public int longitude;
-	public int latitude;
-	public Type type;
+	private String id;
+	private int longitude;
+	private int latitude;
+	private Type type;
 
-	public Secteur(int id, int longitude, int latitude, Type type) {
+	public Secteur(String id, int longitude, int latitude, Type type) {
 		this.id = id;
 		this.longitude = longitude;
 		this.latitude = latitude;
 		this.type = type;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

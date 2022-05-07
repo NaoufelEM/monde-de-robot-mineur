@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.util.ArrayList;
 import java.util.List;
 
+import enumeration.Type;
 import secteurs.Entrepot;
 import secteurs.Mine;
 import secteurs.Secteur;
@@ -31,10 +32,26 @@ public class Monde {
 
 	public void afficher() {
 		for (int i = 0; i < largeur; i++) {
+			System.out.print("\t" + i);
+		}
+		System.out.println();
+		for (int i = 0; i < largeur; i++) {
+			System.out.print(i + "\t");
 			for (int j = 0; j < longueur; j++) {
-				System.out.print(matrice[i][j] + "\t");
+				Secteur monSecteur = matrice[i][j];
+				System.out.print(monSecteur.getId() + "\t");
 			}
+
 			System.out.println();
+		}
+
+	}
+
+	public void initVide() {
+		for (int i = 0; i < largeur; i++) {
+			for (int j = 0; j < longueur; j++) {
+				matrice[i][j] = new Secteur("V" + i + j, i, j, Type.VIDE);
+			}
 		}
 	}
 

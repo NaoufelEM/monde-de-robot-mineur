@@ -1,8 +1,8 @@
 objectifs:
 
-- Afficher monde vide
+- Afficher monde vide (fait)
 
-- Initialise le monde avec des secteurs vides
+- Initialise le monde avec des secteurs vides (fait)
 
 - Ajouter les secteurs d'eau
 

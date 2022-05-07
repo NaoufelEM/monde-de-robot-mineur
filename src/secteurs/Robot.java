@@ -12,7 +12,7 @@ public class Robot extends Secteur {
 	private int capaciteExtraction;
 	private List<Minerai> minerais;
 
-	public Robot(int id, int longitude, int latitude, Type type, int capaciteStockage, int capaciteExtraction) {
+	public Robot(String id, int longitude, int latitude, Type type, int capaciteStockage, int capaciteExtraction) {
 		super(id, longitude, latitude, type);
 		this.capaciteStockage = capaciteStockage;
 		this.capaciteExtraction = capaciteExtraction;
