@@ -6,7 +6,7 @@ objectifs:
 
 - Ajouter des minerais dans les mines (fait)
 
-
+- Nouvelle matrice de 2 sur 2 (fait)
 
 - Ajouter les secteurs d'eau
 
