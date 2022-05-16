@@ -12,11 +12,15 @@ public class Robot extends Secteur {
 	private int capaciteExtraction;
 	private List<Minerai> minerais;
 
-	public Robot(String id, int longitude, int latitude, Type type, int capaciteStockage, int capaciteExtraction) {
+	public Robot(int id, int longitude, int latitude, Type type, int capaciteStockage, int capaciteExtraction) {
 		super(id, longitude, latitude, type);
 		this.capaciteStockage = capaciteStockage;
 		this.capaciteExtraction = capaciteExtraction;
 		this.minerais = new ArrayList<>();
+		super.getMatrice()[0][0]="R";
+        super.getMatrice()[0][1] = String.valueOf(id) ;
+        super.getMatrice()[1][0]="X";
+        super.getMatrice()[1][1]="X";
 	}
 
 	public List<Minerai> getMinerais() {

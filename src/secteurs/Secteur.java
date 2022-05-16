@@ -3,23 +3,33 @@ package secteurs;
 import enumeration.Type;
 
 public class Secteur {
-	private String id;
+	private int id;
+	private String[][] matrice;
 	private int longitude;
 	private int latitude;
 	private Type type;
 
-	public Secteur(String id, int longitude, int latitude, Type type) {
+	public Secteur(int id, int longitude, int latitude, Type type) {
 		this.id = id;
 		this.longitude = longitude;
 		this.latitude = latitude;
 		this.type = type;
+		this.matrice = new String[2][2];
+        this.matrice[0][0] = "X";
+        this.matrice[0][1] = "X";
+        this.matrice[1][0] = "X";
+        this.matrice[1][1] = "X";
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
+	
+	public String getNumero() {
+		return this.matrice[0][0]+this.id;
+	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -46,5 +56,13 @@ public class Secteur {
 	public void setType(Type type) {
 		this.type = type;
 	}
-
+	
+	public String[][] getMatrice() {
+		return matrice;
+	}
+	
+	public void setMatrice(String[][] matrice) {
+		this.matrice = matrice;
+	}
+	
 }

@@ -4,6 +4,10 @@ objectifs:
 
 - Initialise le monde avec des secteurs vides (fait)
 
+- Ajouter des minerais dans les mines (fait)
+
+
+
 - Ajouter les secteurs d'eau
 
 - Ajouter les minerais
