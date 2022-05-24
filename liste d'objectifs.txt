@@ -8,6 +8,12 @@ objectifs:
 
 - Nouvelle matrice de 2 sur 2 (fait)
 
+- Afficher les mines dans le menu (fait)
+
+- Afficher les entrepots 
+
+- Afficher les robots 
+
 - Ajouter les secteurs d'eau
 
 - Ajouter les minerais
@@ -17,3 +23,5 @@ objectifs:
 - Ajouter les robots
 
 - Afficher la matrice finale
+
+(robot.getNumero(), robot.getLongitude(), robot.getLatitude(), robot.getType(), robot.capaciteStockage(), robot.capaciteExtraction()) 
