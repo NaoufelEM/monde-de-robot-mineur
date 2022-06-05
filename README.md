@@ -3,4 +3,3 @@ Ce noyau consiste en la modélisation et la simulation de robots mineurs exploit
 Le projet est develloppé par **Naoufel EL Mourabit** (naelmourabit.go@gmail.com)
 
 
-3AecCcg1icDYHh3xA1
