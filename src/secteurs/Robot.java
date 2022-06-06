@@ -39,25 +39,26 @@ public class Robot extends Secteur {
 		switch (direction) {
 		case NORD -> {
 			System.out.println("NORD");
-			if (this.longitude - 1 > 0 && peutAllerVers(matrice[this.longitude - 1][this.latitude], matrice)) {
+			if (this.longitude - 1 >= 0 && peutAllerVers(matrice[this.longitude - 1][this.latitude], matrice)) {
 				super.longitude--;
 			}
 		}
 		case SUD -> {
 			System.out.println("SUD");
-			if (this.longitude + 1 < matrice.length && peutAllerVers(matrice[this.longitude + 1][this.latitude], matrice)) {
+			if (this.longitude + 1 <= matrice.length
+					&& peutAllerVers(matrice[this.longitude + 1][this.latitude], matrice)) {
 				super.longitude++;
 			}
 		}
 		case OUEST -> {
 			System.out.println("OUEST");
-			if (this.latitude - 1 > 0 && peutAllerVers(matrice[this.longitude][this.latitude - 1], matrice)) {
+			if (this.latitude - 1 >= 0 && peutAllerVers(matrice[this.longitude][this.latitude - 1], matrice)) {
 				super.latitude--;
 			}
 		}
 		case EST -> {
 			System.out.println("EST");
-			if (this.latitude + 1 < matrice.length && peutAllerVers(matrice[this.longitude][this.latitude + 1], matrice)) {
+			if (this.latitude + 1 <= matrice.length && peutAllerVers(matrice[this.longitude][this.latitude + 1], matrice)) {
 				super.latitude++;
 			}
 		}
@@ -65,14 +66,20 @@ public class Robot extends Secteur {
 	}
 
 	public void recolter(Mine mine) {
-		// TODO il faudra implementer ça.
-		for (int i = 0; i < capaciteExtraction - this.minerais.size(); i++) {
-			this.minerais.add(mine.getMinerais().remove(i));
+		if (capaciteStockage - this.minerais.size() < capaciteExtraction) {			
+			for (int i = 0; i < capaciteExtraction - this.minerais.size(); i++) {
+				this.minerais.add(mine.getMinerais().remove(i));
+
+			}
+		} else {
+			for (int i = 0; i < capaciteExtraction; i++) {
+				this.minerais.add(mine.getMinerais().remove(capaciteExtraction));
+
+			}
 		}
 	}
 
 	public void deposer(Entrepot entrepot) {
-		// TODO il faudra implementer ça.
 		for (int i = 0; i < this.minerais.size(); i++) {
 			entrepot.getMinerais().add(this.minerais.remove(i));
 		}

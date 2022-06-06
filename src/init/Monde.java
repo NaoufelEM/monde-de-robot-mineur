@@ -107,8 +107,8 @@ public class Monde {
 				latitude = Utils.randomGenerateur(0, 10);
 			} while (this.matrice[longitude][latitude].getType() != Type.VIDE);
 
-			int capaciteStockage = Utils.randomGenerateur(5, 9);
-			int capaciteExtraction = Utils.randomGenerateur(1, 3);
+			int capaciteStockage = Utils.randomGenerateur(5, 10);
+			int capaciteExtraction = Utils.randomGenerateur(1, 4);
 
 			Robot robot = new Robot(i, longitude, latitude, Type.OR, capaciteStockage, capaciteExtraction);
 			this.matrice[longitude][latitude] = robot;
@@ -120,8 +120,8 @@ public class Monde {
 				longitude = Utils.randomGenerateur(0, 10);
 				latitude = Utils.randomGenerateur(0, 10);
 			} while (this.matrice[longitude][latitude].getType() != Type.VIDE);
-			int capaciteStockage = Utils.randomGenerateur(5, 9);
-			int capaciteExtraction = Utils.randomGenerateur(1, 3);
+			int capaciteStockage = Utils.randomGenerateur(5, 10);
+			int capaciteExtraction = Utils.randomGenerateur(1, 4);
 
 			Robot robot = new Robot(i, longitude, latitude, Type.NICKEL, capaciteStockage, capaciteExtraction);
 			this.matrice[longitude][latitude] = robot;
@@ -178,8 +178,8 @@ public class Monde {
 
 			// Affichage des informations sur les robots
 			for (Robot robot : robots) {
-				System.out.printf("%s\t%s%s\t%s\t%s/%s%n", robot.getNumero(), robot.getLongitude(), robot.getLatitude(),
-						robot.getType(), robot.getMinerais().size(), robot.getCapaciteStockage());
+				System.out.printf("%s\t%s%s\t%s\t/%s/%s/%s%n", robot.getNumero(), robot.getLongitude(), robot.getLatitude(),
+						robot.getType(),robot.getCapaciteExtraction(), robot.getMinerais().size(), robot.getCapaciteStockage());
 			}
 
 			// Saisie du joueur
